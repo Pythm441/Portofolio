@@ -77,7 +77,8 @@ body {
     overflow: hidden;
     border-right: 2px solid #00ff41;
     white-space: nowrap;
-    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+    max-width: 100%;
 }
 
 @keyframes typing {
@@ -235,7 +236,18 @@ body {
 
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        word-break: break-word;
+        white-space: normal;
+        border-right: none;
+        animation: glow 2s ease-in-out infinite alternate;
+    }
+    
+    .typing-animation {
+        white-space: normal;
+        word-break: break-word;
+        border-right: none;
+        animation: glow 2s ease-in-out infinite alternate;
     }
     
     .container {
@@ -244,5 +256,14 @@ body {
     
     .terminal-window {
         padding: 20px;
+    }
+    
+    .terminal-header {
+        padding: 8px 15px;
+    }
+    
+    .terminal-title {
+        font-size: 12px;
+        word-break: break-word;
     }
 }

@@ -235,19 +235,27 @@ body {
 }
 
 @media (max-width: 768px) {
-    .hero h1 {
+    .hero h1.typing-animation {
         font-size: 1.8rem;
-        word-break: break-word;
-        white-space: normal;
-        border-right: none;
-        animation: glow 2s ease-in-out infinite alternate;
+        white-space: nowrap;
+        border-right: 2px solid #00ff41;
+        animation: typing 3s steps(15, end), blink-caret 0.75s step-end infinite;
     }
     
-    .typing-animation {
-        white-space: normal;
-        word-break: break-word;
-        border-right: none;
-        animation: glow 2s ease-in-out infinite alternate;
+    .hero h1.typing-animation::before {
+        content: "A . H . Metawea";
+    }
+    
+    .hero h1.typing-animation {
+        font-size: 0;
+    }
+    
+    .hero h1.typing-animation::before {
+        font-size: 1.8rem;
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3s steps(15, end), blink-caret 0.75s step-end infinite;
     }
     
     .container {

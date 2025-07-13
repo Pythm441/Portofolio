@@ -107,3 +107,5 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(blinkStyle);
 });
+
+//I just want to make sure the code is clean and functional

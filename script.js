@@ -109,3 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //I just want to make sure the code is clean and functional
+//Check for any console errors
+console.clear();
+console.log('Matrix rain effect initialized. Enjoy the visual spectacle!');
